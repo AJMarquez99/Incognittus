@@ -1,3 +1,4 @@
 defaults/
 .htaccess
 error_log
+sass/
