@@ -1,0 +1,482 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* RESET CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+ box-sizing: border-box;  
+}
+/* NEW CSS */
+
+/* FOUNDATION CSS - START */
+
+:root {
+  --dark: #262626;
+  --light: #FAFAFA;
+  --accent-r: #FF8552;
+  --accent-g: #72A276;
+  --accent-b: #17BEBB;
+
+  --font-sans: 'Questrial', sans-serif;
+  --font-serif: 'Roboto Slab', serif;
+}
+
+body {
+  position: relative;
+  background-color: var(--light);
+}
+
+section[id$="container"] {
+  margin: 100px 0;
+}
+
+header {
+  z-index: 1000;
+}
+
+section {
+  z-index: 100;
+}
+
+section > h2 {
+  font-size: 1.375rem;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.parallax-overlay {
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+}
+
+:is( nav > *, header > *, h1, h2, h3, h4, h5, h6, .button ){
+  font-family: var( --font-sans);
+}
+
+.button {
+  display: block;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--light);
+  background-color: var(--dark);
+  padding: 15px 20px;
+  min-width: 100px;
+  max-width: 200px;
+  width: auto;
+  text-align: center;
+  margin: 20px auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 1px 10px var(--dark);
+}
+
+.button.green {
+  background-color: var(--accent-g);
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.img-container.center-bottom img {
+  object-position: center bottom;
+}
+
+.product-container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 220px;
+  min-width: 220px;
+  max-width: 220px;
+  height: auto;
+  padding: 10px 20px;
+}
+
+.product-container .product-img {
+  border: 4px solid rgba(38,38,38,0.05);
+  height: 180px;
+}
+
+.product-container .product-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin: 10px 0;
+  height: 40px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+.product-title {
+  text-transform: uppercase;
+}
+
+.product-colors {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -5px;
+}
+
+.color {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: var(--dark);
+}
+
+.color.frame-wood {
+  border: 4px solid #D4AD6F;
+}
+
+.color.frame-wood-dark {
+  border: 4px solid #5C4B3E;
+}
+
+.color.frame-blue {
+  border: 4px solid #0296F6;
+}
+
+.color.lens-blue {
+  background-color: #0296F6;
+}
+
+.color.lens-red {
+  background-color: #F60277;
+}
+
+.color.lens-gray {
+  background-color: #D7D7D7;
+}
+
+ul.carousel {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.indicator-container {
+  width: 60%;
+  margin: 20px auto 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+} 
+
+.indicator-single {
+  height: 2px;
+  width: 20px;
+  margin: 0 3px;
+  background-color: var(--dark);
+}
+
+.social-apps {
+  display: flex;
+  flew-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+}
+/* FOUNDATION CSS - END */
+
+/* NAV CSS - START */ 
+
+header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
+  height: 55px;
+  width: 100%;
+}
+
+.logo-text {
+  width: 61%;
+  height: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 15px;
+  font-size: 1.75rem;
+
+  text-decoration: none;
+}
+
+header > div {
+  width: 13%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+#nav_icon {
+  position: relative;
+  height: inherit;
+  width: 100%;
+}
+
+#nav_icon > div {
+  position: absolute;
+  height: 3px;
+  width: 24px;
+  background-color: var(--light);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#nav_icon > div:first-of-type {
+  top: 35%;
+}
+
+#nav_icon > div:last-of-type {
+  top: 64%;
+}
+
+header.scrolled {
+  background-color: var(--light);
+  color: var(--dark);
+  box-shadow: 0 1px 10px var(--dark);
+}
+
+/*header.scrolled h1, 
+header.scrolled a, 
+header.scrolled i {
+  transition: color 0.25s;
+}*/
+
+header.scrolled #nav_icon > div {
+  background-color: var(--dark);
+}
+
+header a, 
+header h1,  
+header i {
+  color: inherit;
+}
+
+nav {
+  display: none;
+}
+
+/* NAV CSS - END */
+
+/* HOME CSS - START */
+
+#landing_container {
+  height: 100%;
+  position: relative;
+  background-image: url("../images/landing_bg_new.jpg");
+  background-position: center center;
+  background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--light);
+  margin: 0;
+}
+
+#landing_container h2 {
+  color: inherit;
+  font-size: 2.25rem;
+  text-shadow: 0 2px 5px var(--dark);
+  margin-bottom: 20px;
+}
+
+#specials_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+#specials_container > div {
+  width: 45vw;
+  height: 45vw;
+  margin: 5px 0;
+  background-color: var(--dark);
+}
+
+#specials_container div.text {
+  color: var(--light);
+  font-size: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  font-family: var(--font-sans);
+  padding: 5px;
+}
+
+#specials_container div.text.left {
+  align-items: flex-end;
+}
+
+#help_container {
+  padding: 0 20px;
+}
+
+#help_container .img-container {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: 0px 3px 3px 0px #C4C4C4;
+}
+
+#help_container .img-container span {
+  position: absolute;
+  bottom: 2px;
+  font-family: var(--font-sans);
+  font-size: 2.125rem;
+  color: var(--light); 
+  text-transform: uppercase;
+}
+
+#help_container .img-container span.left {
+  left: 5px;
+}
+
+#help_container .img-container span.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#help_container .img-container span.right {
+  right: 5px;
+}
+
+#us_container .img-container {
+  height: 250px;
+}
+
+#us_container p {
+  text-align: center;
+  padding: 40px 15px 0;
+  font-size: 1rem;
+  font-family: var(--font-serif);
+  line-height: 1.75rem;
+}
+
+#social_container {
+  margin-bottom: 0;
+}
+
+#social_container .social-apps {
+  padding: 0 50px;
+  margin: 50px 0;
+}
+
+#social_container .gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#social_container .gallery .img-container {
+  width: 25%;
+  height: 25vw;
+}
+
+#social_container .gallery .img-container img {
+  object-fit: contain;
+}
+
+footer {
+  background-color: var(--dark);
+  color: var(--light);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+#footer_links {
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+#footer_links a {
+  text-decoration: none;
+  color: var(--light);
+  margin: 0 5px;
+} 
+/* HOME CSS - END */
