@@ -329,7 +329,8 @@ nav {
 #landing_container {
   height: 100%;
   position: relative;
-  background-image: url("../images/landing_bg_new.jpg");
+  /*background-image: url("../images/landing_bg_new.jpg");*/
+  background-image: url("https://incognittus-tmp.s3.us-east-2.amazonaws.com/site/landing_bg.jpg");
   background-position: center center;
   background-size: cover;
   -o-background-size: cover;
