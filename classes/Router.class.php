@@ -14,6 +14,9 @@ class Router
 
     public function exec(){
       switch( $this->address[1] ){
+	case "products":
+          require_once(BASE_DIR . "/view/products.php");
+          break;
         case "":
         case "home":
           require_once(BASE_DIR . "/view/home.php");
